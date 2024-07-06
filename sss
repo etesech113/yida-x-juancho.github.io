@@ -1,0 +1,14 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const content = document.querySelector('.content');
+
+    // Añadir un efecto de desvanecimiento en el contenido
+    content.style.opacity = 0;
+    setTimeout(() => {
+        content.style.transition = "opacity 2s";
+        content.style.opacity = 1;
+    }, 100);
+
+    // Añadir animación de brillo a los encabezados
+    const headings = document.querySelectorAll('h1, h2');
+    headings.forEach(heading => {
+        heading.style.transition = "text-shadow 0.5s
